@@ -23,6 +23,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Comun", "Comun", "{BA10C9B5
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PedroMayo.Comun", "PedroMayo.Comun\PedroMayo.Comun.csproj", "{4C78C4C8-5B53-4876-B7F1-2A7E48FD0F53}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PedroMayo.Comun.Web", "PedroMayo.Comun.Web\PedroMayo.Comun.Web.csproj", "{4F6B66D4-C721-45D7-B35F-2E2801DE85F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{4C78C4C8-5B53-4876-B7F1-2A7E48FD0F53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C78C4C8-5B53-4876-B7F1-2A7E48FD0F53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C78C4C8-5B53-4876-B7F1-2A7E48FD0F53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F6B66D4-C721-45D7-B35F-2E2801DE85F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F6B66D4-C721-45D7-B35F-2E2801DE85F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F6B66D4-C721-45D7-B35F-2E2801DE85F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F6B66D4-C721-45D7-B35F-2E2801DE85F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,5 +67,6 @@ Global
 		{33629CCF-8B90-42F2-9E78-548810C32495} = {E5EFCE0F-CE67-40C5-82BF-64717E4C16E5}
 		{BA10C9B5-3C55-4878-9BDC-249DEE5EC83A} = {F717E4A1-2AC5-46C5-8EC2-5FC51D0D4D1C}
 		{4C78C4C8-5B53-4876-B7F1-2A7E48FD0F53} = {BA10C9B5-3C55-4878-9BDC-249DEE5EC83A}
+		{4F6B66D4-C721-45D7-B35F-2E2801DE85F2} = {A3556A21-B092-4293-92F4-AE531533C050}
 	EndGlobalSection
 EndGlobal

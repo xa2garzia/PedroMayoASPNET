@@ -25,8 +25,11 @@
     protected void ValidateUser(object sender, AuthenticateEventArgs e)
         {
             int userId = 0;
+
+            AppDomain.CurrentDomain.SetData("DataDirectory", System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "App_Data"));
+
             //string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
-            string constr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='C:\Users\xgb\Documents\Visual Studio 2015\Projects\PedroMayo_WebASPNET\PedroMayo_WebASPNET\App_Data\PedroMayo.mdf';Integrated Security=True";
+            string constr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='|DataDirectory|\PedroMayo.mdf';Integrated Security=True";
             using (SqlConnection con = new SqlConnection(constr))
             {
                 using (SqlCommand cmd = new SqlCommand("Validate_User"))

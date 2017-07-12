@@ -20,9 +20,8 @@ namespace PedroMayo.Main.DataAccessLayer
             SqlDataReader result;
             List<TUsers> users = new List<TUsers>();
 
-
             //string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
-            string constr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='C:\Users\xgb\Documents\Visual Studio 2015\Projects\PedroMayo_WebASPNET\PedroMayo_WebASPNET\App_Data\PedroMayo.mdf';Integrated Security=True";
+            string constr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='|DataDirectory|\PedroMayo.mdf';Integrated Security=True";
             using (SqlConnection con = new SqlConnection(constr))
             {
                 using (SqlCommand cmd = new SqlCommand("SELECT IdUser, Name FROM dbo.TUsers"))

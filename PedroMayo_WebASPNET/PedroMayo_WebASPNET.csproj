@@ -131,6 +131,10 @@
       <Project>{33629CCF-8B90-42F2-9E78-548810C32495}</Project>
       <Name>PedroMayo.Main.DataTransferObjects</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PedroMayo.Comun.Web\PedroMayo.Comun.Web.csproj">
+      <Project>{4f6b66d4-c721-45d7-b35f-2e2801de85f2}</Project>
+      <Name>PedroMayo.Comun.Web</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PedroMayo.Main.BusinessLogic\PedroMayo.Main.BusinessLogic.csproj">
       <Project>{b7fab28f-b679-46ce-b28d-a129cb67dc43}</Project>
       <Name>PedroMayo.Main.BusinessLogic</Name>
