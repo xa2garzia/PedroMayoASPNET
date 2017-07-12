@@ -1,0 +1,30 @@
+﻿body
+    {
+        font-family: Arial;
+        font-size: 10pt;
+    }
+    .main_menu
+    {
+        width: 100px;
+        background-color: #8AE0F2;
+        color: #000;
+        text-align: center;
+        height: 30px;
+        line-height: 30px;
+        margin-right: 5px;
+    }
+    .level_menu
+    {
+        width: 110px;
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        height: 30px;
+        line-height: 30px;
+        margin-top: 5px;
+    }
+    .selected
+    {
+        background-color: #852B91;
+        color: #fff;
+    }

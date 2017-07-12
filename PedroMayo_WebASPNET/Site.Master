@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="PedroMayo_WebASPNET.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="_style/PedroMayo.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table>
+            <tr>
+                <td style="padding-bottom:5px;">&nbsp;                    
+                    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="false" />
+                    <asp:Menu ID="Menu" runat="server" DataSourceID="SiteMapDataSource1" OnMenuItemDataBound="OnMenuItemDataBound" Orientation="Horizontal" BorderStyle="Solid">
+                        <LevelMenuItemStyles>
+                            <asp:MenuItemStyle CssClass="main_menu" />
+                            <asp:MenuItemStyle CssClass="level_menu" />
+                        </LevelMenuItemStyles>
+                        <StaticHoverStyle CssClass="MenuHorizontalHover"/>
+                        <StaticSelectedStyle CssClass="MenuHorizontalselected" />
+                    </asp:Menu>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
