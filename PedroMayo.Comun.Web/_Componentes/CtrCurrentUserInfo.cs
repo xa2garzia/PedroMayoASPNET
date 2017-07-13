@@ -13,7 +13,8 @@ namespace PedroMayo.Comun.Web.Components
     /// <summary>
     /// IPostBackEventHandler para manejar los postback realizados por el control
     /// </summary>
-    public class CtrCurrentUserInfo : UserControl, IPostBackEventHandler
+    
+    public class CtrCurrentUserInfo : WebControl, IPostBackEventHandler
     {
         private UpdatePanel _updHeader = new UpdatePanel { ID = "updHead", UpdateMode = UpdatePanelUpdateMode.Conditional };
 
@@ -109,3 +110,4 @@ namespace PedroMayo.Comun.Web.Components
         #endregion IPostBackEventHandler
     }
 }
+
