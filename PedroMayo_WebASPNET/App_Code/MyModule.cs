@@ -5,6 +5,12 @@ using System.Web;
 
 namespace PedroMayo_WebASPNET.App_Code
 {
+    /// <summary>
+    /// Modulo, sirve para poder interferir en los procesamientos de solicitudes. Por este módulo pasarán
+    /// todas las solicitudes. Se pueden crear varios módulos y lo normal es que cada módulo tenga una
+    /// funcionalidad concreta (Por ejemplo: SecurityModule, StatisticModule, LogginModule, CustomHeadersFooters  
+    /// etc).
+    /// </summary>
     public class MyModule : IHttpModule
     {
         public void Dispose()

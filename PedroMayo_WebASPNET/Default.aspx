@@ -18,6 +18,5 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <label>Hello</label>
     <asp:Label ID="Welcome" runat="server" />
-    <asp:Button ID="Submit1" OnClick="Signout_Click" 
-       Text="Sign Out" runat="server" /><p>
+    <asp:Button ID="Submit1" OnClick="Signout_Click" Text="Sign Out" runat="server" /><p>
 </asp:Content>
