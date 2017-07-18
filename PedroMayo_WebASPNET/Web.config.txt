@@ -8,10 +8,6 @@
     <!-- For more information on Entity Framework configuration, visit http://go.microsoft.com/fwlink/?LinkID=237468 -->
     <section name="entityFramework" type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
   </configSections>
-  <connectionStrings>
-    <add name="DefaultConnection" connectionString="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\PedroMayo.mdf;Integrated Security=True"
-          providerName="System.Data.SqlClient" />
-  </connectionStrings>
   <system.web>
     <compilation debug="true" targetFramework="4.6.1" />
     <httpRuntime targetFramework="4.6.1" />
@@ -21,7 +17,7 @@
       </controls>
     </pages>
     <authentication mode="Forms">
-      <forms loginUrl="MAIN\Register.aspx" name=".ASPXFORMSAUTH"></forms>
+      <forms loginUrl="Logon.aspx" name=".ASPXFORMSAUTH"></forms>
     </authentication>
     <authorization>
       <deny users="?" />
