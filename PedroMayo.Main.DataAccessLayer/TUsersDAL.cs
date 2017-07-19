@@ -45,5 +45,38 @@ namespace PedroMayo.Main.DataAccessLayer
             //return result.AutoMap<>.ToList();
             return users;
         }
+
+        public DataTable GetUsersDT()
+        {
+            SqlDataReader result;
+            DataTable dt = new DataTable();
+
+            //string constr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
+            string constr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='|DataDirectory|\PedroMayo.mdf';Integrated Security=True";
+            using (SqlConnection con = new SqlConnection(constr))
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT IdUser, Name FROM dbo.TUsers"))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = con;
+                    con.Open();
+
+                    //result = cmd.ExecuteReader();
+                    
+                    SqlDataAdapter a = new SqlDataAdapter(cmd);
+                    a.Fill(dt);
+
+
+                    con.Close();
+                }
+            }
+
+
+
+            //IDataReader
+
+            //return result.AutoMap<>.ToList();
+            return dt;
+        }
     }
 }

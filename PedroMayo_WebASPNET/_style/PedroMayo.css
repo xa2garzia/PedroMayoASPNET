@@ -28,3 +28,2444 @@
         background-color: #852B91;
         color: #fff;
     }
+@import url(Raleway.css);
+
+/*#DefaultFont: font-family: 'Raleway', sans-serif; #*/
+/*#DefaultTextColor: color: #0C0C0C; #*/
+/*#DefaultBackgroundColor: background-color: #EFF0F2; #*/
+/*#HeaderTextColor: color: #FFFFFF; #*/
+/*#HeaderBackgroundColor: background-color: #00B3C0; #*/
+/*#HeaderHoverBackgroundColor: background-color: #579AA6; #*/
+/*#HeaderActiveBackgroundColor: background-color: #1D2936; #*/
+/*#ControlBackgroundColor: background-color: #FFFFFF; #*/
+/*#ControlInactiveTextColor: color: #606060; #*/
+/*#ControlBorder: border: solid 1px #DDDDDD; #*/
+/*#ActiveMenuTextColor: color: #FFD600; #*/
+/*#AccentBackgroundColor: background-color: #FFD600; #*/
+
+/*#ControlFocusStyle:
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.3);
+    outline: none;
+#*/
+/*#ActiveMenuFocusStyle:
+    box-shadow: inset 0 0 0px 1px rgba(255,255,255,1);
+    outline: none;
+#*/
+/*#MenuFocusStyle:
+    box-shadow: inset 0 0 0px 1px rgba(0,0,0,0.5);
+    outline: none;
+#*/
+
+/* Style Reset */
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    border: 0;
+    /*$DefaultFont$*/
+}
+
+::-moz-focus-inner {
+    border: 0;
+    display: none;
+}
+
+::-ms-clear {
+    display: none;
+}
+
+html, form, center {
+    margin: 0px;
+    overflow: visible;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    display: block;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    /*$DefaultFont$*/
+    /*$DefaultTextColor$*/
+    font-size: 13px;
+    font-style: normal;
+    -ms-user-select: none;
+    font-weight: normal;
+    text-align: left;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    /*$DefaultBackgroundColor$*/
+    display: block;
+}
+
+/* Habilitar wordwrapping dentro de los tags pre */
+pre {
+    white-space: pre-wrap; /* css-3 */
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+[unselectable=on] {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* MASTER */
+.masterContainer {
+    display: block;
+    width: auto;
+    min-height: 100%;
+    /*$DefaultBackgroundColor$*/
+    z-index: -10;
+    min-width: 1000px;
+}
+
+.masterHeader {
+    width: 100%;
+    /*$HeaderBackgroundColor$*/
+    z-index: 0;
+}
+
+.masterSubHeader {
+    position: relative;
+    height: 76px;
+    min-width: 1000px;
+}
+
+.HalfHidden {
+    color: Black;
+    padding: 2px;
+    text-decoration: none;
+    opacity: 0.3;
+    font-family: Monospace;
+    font-size: 10px;
+    position: absolute;
+}
+
+.masterSubHeader .HalfHidden {
+    color: White;
+}
+
+.HalfHidden a {
+    color: Black;
+    text-decoration: none;
+    font-family: Monospace;
+    font-size: 10px;
+}
+
+.masterSubHeader .HalfHidden a {
+    color: White;
+}
+
+.DevHalfHidden {
+    display: none;
+}
+
+.Developer .DevHalfHidden {
+    display: inline;
+}
+
+.DevHalfHidden {
+    color: Black;
+    padding: 2px;
+    text-decoration: none;
+    opacity: 0.3;
+    font-family: Monospace;
+    font-size: 10px;
+    position: absolute;
+}
+
+.masterSubHeader .DevHalfHidden {
+    color: White;
+}
+
+.Developer .HalfHidden .DevHalfHidden {
+    opacity: 1;
+}
+
+.HalfHidden:focus,
+.HalfHidden a:focus,
+.DevHalfHidden:focus,
+.DevHalfHidden a:focus {
+    /*$ControlFocusStyle$*/
+    opacity: 1;
+}
+
+.HalfHidden.focus-within,
+.DevHalfHidden.focus-within {
+    opacity: 1;
+}
+
+.masterLogo {
+    position: absolute;
+    left: 25px;
+    top: 15px;
+    white-space: nowrap;
+}
+
+    .masterLogo.focus-within {
+        /*$ControlFocusStyle$*/
+    }
+
+.headerUserData {
+    position: absolute;
+    right: 20px;
+    top: 6px;
+    white-space: nowrap;
+    /*$DefaultFont$*/
+    /*$HeaderTextColor$*/
+    line-height: 48px;
+    display: block;
+    z-index: 6;
+    width: 200px;
+    text-align: right;
+    direction: rtl;
+}
+
+    .headerUserData div:focus,
+    .headerUserData a:focus {
+        /*$MenuFocusStyle$*/
+    }
+
+.masterNotification {
+    font-size: 15px;
+    position: relative;
+    line-height: 46px;
+    padding-left: 15px;
+    padding-right: 15px;
+    /*$HeaderTextColor$*/
+    text-decoration: none;
+    vertical-align: top;
+    direction: ltr;
+    display: inline-block;
+    border: solid 1px #96C6D0;
+    border-right: none;
+    box-sizing: border-box;
+    /*$HeaderBackgroundColor$*/
+}
+
+    .masterNotification:hover {
+        /*$ActiveMenuTextColor$*/
+        /*$HeaderHoverBackgroundColor$*/
+    }
+
+    .masterNotification img {
+        vertical-align: middle;
+    }
+
+    .masterNotification.active {
+        /*$HeaderActiveBackgroundColor$*/
+        /*$ActiveMenuTextColor$*/
+    }
+
+.headerUserDataField {
+    display: inline-block;
+    width: auto;
+    text-align: center;
+    font-size: 0;
+    line-height: 0;
+    white-space: normal;
+    /*$HeaderBackgroundColor$*/
+    /*$HeaderTextColor$*/
+    border: solid 1px #96C6D0;
+    cursor: pointer;
+    box-sizing: border-box;
+    direction: ltr;
+    position: relative;
+    padding-right: 61px;
+}
+
+    .headerUserDataField:hover {
+        /*$HeaderHoverBackgroundColor$*/
+        /*$ActiveMenuTextColor$*/
+    }
+
+    .headerUserDataField.active {
+        /*$HeaderActiveBackgroundColor$*/
+        /*$ActiveMenuTextColor$*/
+    }
+
+    .headerUserDataField span {
+        padding-left: 15px;
+    }
+
+    .headerUserDataField .spanDisplayName {
+        display: inline-block;
+        white-space: nowrap;
+        padding-top: 7px;
+        font-size: 15px;
+        line-height: 22px;
+        height: 22px;
+    }
+
+    .headerUserDataField .spanWorkCenter {
+        display: inline-block;
+        white-space: nowrap;
+        font-size: 12px;
+        line-height: 17px;
+        height: 17px;
+    }
+
+    .headerUserDataField .divImgUser {
+        height: 46px;
+        width: 46px;
+        line-height: 44px;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: center;
+    }
+
+    .headerUserDataField img {
+        padding: 0;
+        vertical-align: middle;
+    }
+
+.headerPanel {
+    position: absolute;
+    padding: 0;
+    z-index: 100;
+    width: 100%;
+    text-align: left;
+    direction: ltr;
+    box-sizing: border-box;
+    /*$DefaultTextColor$*/
+    /*$HeaderBackgroundColor$*/
+    padding: 0;
+    border-top: 0;
+    border: 1px solid #96C6D0;
+    overflow: visible;
+    width: 100%;
+    font-size: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+
+.headerUserDataPanel {
+    top: 47px;
+}
+
+.headerSubContainer {
+    position: relative;
+}
+
+.headerSubPanel {
+    top: -11px;
+    right: calc(100% - 15px);
+    width: auto;
+    min-height: 48px;
+}
+
+.headerPanel a {
+    display: block;
+    height: 46px;
+    width: 100%;
+    border-top: solid 1px #96C6D0;
+    /*$HeaderTextColor$*/
+    text-decoration: none;
+    line-height: 46px;
+    font-size: 15px;
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+    cursor: pointer;
+}
+
+    .headerPanel a:first-child {
+        border-top: none;
+        cursor: pointer;
+    }
+
+.headerPanel .headerSubContainer > a:first-child {
+    border-top: solid 1px #96C6D0;
+}
+
+.headerPanel a:hover {
+    /*$HeaderHoverBackgroundColor$*/
+    /*$ActiveMenuTextColor$*/
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.headerPanel a.active, .headerPanel a.active:hover {
+    /*$HeaderActiveBackgroundColor$*/
+    /*$ActiveMenuTextColor$*/
+    cursor: pointer;
+}
+
+.divColumnMenu, .divColumnMenuLast {
+    vertical-align: top;
+    display: table-cell;
+    border-left: 1px solid #ACACAC;
+    border-top: 1px solid #ACACAC;
+    padding-top: 20px;
+    padding-bottom: 25px;
+}
+
+.divColumnMenuLast {
+    width: inherit;
+}
+
+.divModInfoTitle {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 27px;
+    color: #1d2936;
+}
+
+.divMenuInfoMod {
+    width: 189px;
+    color: #1d2936;
+}
+
+.divModInfoTitle h1 {
+    font-size: 24px;
+    font-weight: normal;
+    display: inline;
+}
+
+.divModInfoTitle h2 {
+    font-size: 24px;
+    font-weight: bold;
+    display: inline;
+}
+
+.divMenuInfoModInfo {
+    padding-left: 28px;
+    padding-right: 20px;
+    font-size: 17px;
+    padding-bottom: 50px;
+}
+
+.divMenuInfoMod a {
+    display: block;
+    padding-left: 35px;
+    padding-bottom: 6px;
+    padding-right: 5px;
+    padding-top: 6px;
+    line-height: 24px;
+    text-decoration: none;
+    background-image: url(../_Images/Interface/MenuBullet.png);
+    background-repeat: no-repeat;
+    background-position: 28px 12px;
+    font-size: 13px;
+    color: #1d2936;
+    line-height: 18px;
+}
+
+    .divMenuInfoMod a:hover {
+        color: #1d2936;
+        /*$AccentBackgroundColor$*/
+        background-image: url(../_Images/Interface/MenuBullet.png);
+    }
+
+.divMenuApplication {
+    font-size: 15px;
+    width: 162px;
+}
+
+    .divMenuApplication a:hover {
+        color: #1d2936;
+        /*$AccentBackgroundColor$*/
+        background-image: url(../_Images/Interface/MenuBullet.png);
+    }
+
+    .divMenuApplication a.subnavActive {
+        /*$ActiveMenuTextColor$*/
+        background-color: #5d6d7c;
+        background-image: url(../_Images/Interface/MenuBulletSel.png);
+    }
+
+.headernavcontainer ul li {
+    display: block;
+    font-size: 12px;
+}
+
+.headernavcontainer a {
+    display: block;
+    padding-left: 30px;
+    padding-right: 20px;
+    line-height: 18px;
+    color: #1D2936;
+    text-decoration: none;
+    background-image: url(../_Images/Interface/MenuBullet.png);
+    background-repeat: no-repeat;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    background-position: 21px 11px;
+}
+
+    .headernavcontainer a:focus,
+    .modEnlace:focus {
+        /*$MenuFocusStyle$*/
+    }
+
+.divLineMenu {
+    width: 100%;
+    z-index: 0;
+    height: 7px;
+    box-sizing: border-box;
+    border-top: solid 1px rgb(255,255,255);
+    border-bottom: solid 1px rgb(255,255,255);
+    background-color: rgb(240,215,1);
+}
+
+.divNameMenuApp {
+    font-weight: bold;
+    height: 30px;
+    margin-left: 19px;
+    margin-right: 20px;
+    font-size: 12px;
+    padding-bottom: 6px;
+    cursor: default;
+    text-transform: uppercase;
+}
+
+.masterContentContainer {
+    position: absolute;
+    min-height: calc(100% - 177px);
+    width: 100%;
+    overflow: visible;
+}
+
+.masterContent {
+    min-width: 1000px;
+    box-sizing: border-box;
+    overflow: visible;
+    min-height: calc(100% - 177px); /* FullHeight - Header */
+}
+
+#content, .defaultContent {
+    padding-top: 34px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: left;
+    /*$DefaultFont$*/
+    font-size: 15px;
+}
+
+#content {
+    padding-left: 185px;
+}
+
+.defaultContent {
+    padding-left: 25px;
+    padding-right: 25px;
+    min-width: 1000px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.alternativeLogo {
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 900px;
+    white-space: nowrap;
+    font-size: 0;
+}
+
+    .alternativeLogo .imgLogo {
+        width: 127px;
+        padding-right: 15px;
+    }
+
+    .alternativeLogo .appDescription {
+        display: inline-block;
+        width: 240px;
+        white-space: normal;
+        text-transform: uppercase;
+        padding-left: 10px;
+        border-left: solid 1px #ffffff;
+        /*$HeaderTextColor$*/
+    }
+
+        .alternativeLogo .appDescription span {
+            font-size: 12px;
+            /*$HeaderTextColor$*/
+            line-height: 12px;
+        }
+
+.alternativeCultureSelect {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    white-space: nowrap;
+    /*$DefaultFont$*/
+    font-size: 12px;
+    /*$HeaderTextColor$*/
+    line-height: 24px;
+    vertical-align: top;
+}
+
+    .alternativeCultureSelect select {
+        /*$HeaderActiveBackgroundColor$*/
+        width: 120px;
+        /*$HeaderTextColor$*/
+        vertical-align: top;
+        border: solid 1px #1d2936;
+        margin: 1px;
+    }
+
+        .alternativeCultureSelect select option {
+            /*$HeaderActiveBackgroundColor$*/
+            /*$HeaderTextColor$*/
+        }
+
+.alternativeTitleDiv {
+    background-color: #f0d600;
+    width: 100%;
+}
+
+.alternativeTitle {
+    margin: 0 auto;
+    width: 616px;
+    white-space: nowrap;
+    background-color: #f0d600;
+}
+
+    .alternativeTitle h1 {
+        border-left: solid 1px #ffffff;
+        padding-left: 10px;
+        /*$HeaderTextColor$*/
+        line-height: 30px;
+        font-size: 16px;
+    }
+
+.alternativeContent {
+    padding-left: 142px;
+    padding-right: 142px;
+    padding-bottom: 20px;
+    padding-top: 50px;
+    margin: 0 auto;
+    width: 616px; /* (900-(142*2))/2 */
+    position: relative;
+}
+
+    .alternativeContent .pageIcon {
+        position: absolute;
+        top: 62px;
+        right: 768px;
+    }
+
+/*NAVCONAINERMOD - menu HORIZONTAL de MODULOS*/
+.navcontainerMod {
+    left: 0;
+    width: 100%;
+}
+
+    .navcontainerMod .modulesLine {
+        border-top: 1px solid #96C6D0;
+    }
+
+        .navcontainerMod .modulesLine li a:focus {
+            /*$MenuFocusStyle$*/
+        }
+
+        .navcontainerMod .modulesLine li a.navActiveMod:focus {
+            /*$ActiveMenuFocusStyle$*/
+        }
+
+    .navcontainerMod ul {
+        font-size: 15px;
+        height: 46px;
+        white-space: nowrap;
+        padding-right: 20px;
+        min-width: 1000px;
+        box-sizing: border-box;
+    }
+
+        .navcontainerMod ul li {
+            display: inline-block;
+            white-space: nowrap;
+            width: 14.2857%;
+            line-height: 30px;
+            height: 30px;
+            border-color: #96C6D0;
+            border-width: 0px;
+        }
+
+            .navcontainerMod ul li a {
+                display: block;
+                padding: 7px;
+                padding-top: 8px;
+                padding-bottom: 8px;
+                padding-right: 7px;
+                padding-left: 15px;
+                /*$HeaderTextColor$*/
+                border-color: #96C6D0;
+                border-right-width: 1px;
+                border-style: solid;
+                text-decoration: none;
+                cursor: pointer;
+                box-sizing: border-box;
+            }
+
+            .navcontainerMod ul li:first-child a {
+                border-left-width: 1px;
+                padding-left: 28px;
+            }
+
+            .navcontainerMod ul li a:hover {
+                /*$ActiveMenuTextColor$*/
+                /*$HeaderHoverBackgroundColor$*/
+            }
+
+            .navcontainerMod ul li a.navActiveMod {
+                /*$ActiveMenuTextColor$*/
+                /*$HeaderActiveBackgroundColor$*/
+            }
+
+            .navcontainerMod ul li a.selectMod {
+                /*$ActiveMenuTextColor$*/
+            }
+
+/*NAVCONTAINERAPP - menu HORIZONTAL de APLICACIONES*/
+
+.navcontainerAppDiv {
+    position: relative;
+    z-index: 5;
+}
+
+.navcontainerAppCont {
+    z-index: 3;
+    position: absolute;
+    background-color: #D8D8D8;
+    width: 100%;
+    box-shadow: 0px 2px 20px rgba(0,0,0,0.3);
+}
+
+.navcontainerApp {
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid #ACACAC;
+    overflow-x: auto;
+    width: 100%;
+}
+
+/*SUBNAVCONTAINER - menu VERTICAL - ACTIVIDADES*/
+.masterContent .subnavcontainer {
+    position: absolute;
+    top: 0; /* Alinear con el ascent del titular */
+    border-right: 1px solid #CCCDCF;
+    border-left: 1px solid #CCCDCF;
+    height: 100%;
+}
+
+.divsubNameMenuApp {
+    position: absolute;
+    left: 186px;
+    font-size: 13px;
+    width: 500px;
+    color: #5F6267;
+    margin-top: 12px;
+    cursor: default;
+}
+
+.subnavcontainer ul {
+    display: block;
+    /*$DefaultFont$*/
+    font-weight: normal;
+    font-size: 12px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+
+.masterContent .subnavcontainer ul li {
+    display: block;
+    border-bottom: 1px solid #ccc;
+}
+
+.subnavcontainer ul li:first-child {
+    border-top: 1px solid #ccc;
+}
+
+.subnavcontainer a {
+    display: block;
+    width: 141px;
+    padding-left: 24px;
+    padding-bottom: 11px;
+    padding-right: 5px;
+    padding-top: 11px;
+    line-height: 19px;
+    /*$DefaultTextColor$*/
+    text-decoration: none;
+    background-image: url(../_Images/Interface/MenuBullet.png);
+    background-repeat: no-repeat;
+    background-position: 16px 18px;
+}
+
+    .subnavcontainer a:hover {
+        background-color: #d2d7db;
+        background-image: url(../_Images/Interface/MenuBullet.png);
+        background-repeat: no-repeat;
+        background-position: 16px 18px;
+    }
+
+    .subnavcontainer a.subnavActive {
+        /*$ActiveMenuTextColor$*/
+        background-color: #5d6d7c;
+        background-image: url(../_Images/Interface/MenuBulletSel.png);
+        background-repeat: no-repeat;
+        background-position: 16px 18px;
+    }
+
+    .subnavcontainer a:focus {
+        /*$MenuFocusStyle$*/
+    }
+
+    .subnavcontainer a.subnavActive:focus {
+        /*$MenuFocusStyle$*/
+    }
+
+
+/* LOGIN PAGE */
+.loginRow {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.loginField {
+    margin-left: 200px;
+}
+
+.loginFieldTenant {
+    text-align: center;
+}
+
+.loginLabel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 20px;
+    padding-left: 20px;
+    background-image: url(../_Images/Interface/Bullet.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+/* DEFAULT PAGES */
+.defaultBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-width: 1000px;
+}
+
+    .defaultBackground img {
+        position: absolute;
+        width: 100%;
+        height: auto;
+    }
+
+.defaultDescription {
+    /*$HeaderTextColor$*/
+    font-size: 42px;
+    line-height: 43px;
+    /*$DefaultFont$*/
+    font-weight: normal;
+    display: block;
+    width: 500px;
+    padding-top: 10px;
+    position: absolute;
+    text-shadow: 0px 0px 5px rgb(0,0,0);
+}
+
+.defaultCard {
+    /*$AccentBackgroundColor$*/
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 217px;
+    padding: 20px;
+}
+
+    .defaultCard .cardTitle {
+        /*$DefaultFont$*/
+        display: block;
+        color: #444f5a;
+        font-size: 15px;
+        font-weight: bold;
+        margin-top: 5px;
+        padding-top: 10px;
+        border-top: solid 2px #697158;
+    }
+
+    .defaultCard .cardText {
+        /*$DefaultFont$*/
+        display: block;
+        color: #444f5a;
+        font-size: 15px;
+        line-height: 17px;
+        font-weight: normal;
+    }
+
+/* Estilo de las paginas de inicio de los modulos */
+.home_table {
+    border-collapse: collapse;
+    border: none;
+    width: 100%;
+}
+
+    .home_table .home_column {
+        vertical-align: top;
+        padding: 0;
+        padding-left: 60px;
+        white-space: normal;
+        font-size: 15px;
+        padding-left: 405px;
+    }
+
+        .home_table .home_column:first-child {
+            position: absolute;
+            width: 385px;
+            padding: 0;
+        }
+
+    .home_table .home_img {
+        padding-top: 20px;
+        display: block;
+    }
+
+.home_list {
+    padding-top: 20px;
+}
+
+    .home_list:first-child {
+        padding-top: 0;
+    }
+
+.home_table .home_column .title {
+    display: block;
+    padding-bottom: 10px;
+    line-height: 1.1em;
+}
+
+/* IMAGENES */
+img, input[type="image"] {
+    vertical-align: top;
+    font-size: 10px;
+}
+
+a[disabled] img,
+a[disabled] input[type="image"],
+a.aspNetDisabled img,
+a.aspNetDisabled input[type="image"] {
+    opacity: 0.5;
+}
+
+/* ----------------------- */
+/* ELEMENTOS DE FORMULARIO */
+.formBody {
+    /*$ControlBorder$*/
+    padding: 8px;
+    overflow: visible;
+}
+
+.formBlock {
+    margin-bottom: 10px;
+}
+
+.formColumn {
+    box-sizing: border-box;
+    display: inline-block;
+    padding-left: 40px;
+    vertical-align: top;
+    position: relative;
+}
+
+    .formColumn:first-child {
+        padding-left: 0;
+    }
+
+.formBorder {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    /*$ControlBorder$*/
+    padding: 5px;
+    margin-top: 5px;
+}
+
+    .formBorder:first-child {
+        margin-top: 0;
+    }
+
+.formRow {
+    width: 100%; /*white-space:nowrap;*/
+    font-size: 0;
+    vertical-align: top;
+    margin-top: 5px;
+    position: relative;
+}
+
+    .formRow:first-child {
+        margin-top: 0;
+    }
+
+.formButtons {
+    display: block;
+    margin-top: 10px;
+    text-align: right;
+    font-size: 0;
+}
+
+    .formButtons .button {
+        margin-left: 5px;
+    }
+
+hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 1px;
+    width: 100%;
+    background-color: #dddddd;
+}
+
+/* Campos */
+.field, .fieldDesc {
+    margin-top: 5px;
+    position: relative;
+    width: 100%;
+    vertical-align: top;
+    font-size: 15px;
+    white-space: normal;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+    .field:after, .fieldDesc:after {
+        /* Clearfix para los float */
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .field:first-child, .fieldDesc:first-child {
+        margin-top: 0;
+    }
+
+.fieldDesc {
+    font-style: italic;
+}
+
+/* Marcador de importancia */
+.fieldImportant {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    color: rgb(255, 51, 0);
+    font-size: 18px;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+}
+
+.fieldLabel .fieldImportant, .fieldLabelSmall .fieldImportant, .fieldLabelBig .fieldImportant {
+    position: absolute;
+    top: 5px;
+    left: 0;
+}
+
+/* Etiquetas de campos */
+/* NOTA: Usar solo antes de campos: fieldMisc
+ Son estos tres tipos: fieldLabel, fieldLabelSmall, fieldLabelBig */
+.fieldLabel, .fieldLabelSmall, .fieldLabelBig, .formNoteLeft, .formNoteRight {
+    float: left;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 140px;
+    line-height: 20px;
+    vertical-align: top;
+    /*$DefaultFont$*/
+    font-size: 15px;
+    line-height: 18px;
+    padding-left: 10px;
+}
+
+.fieldLabelSmall {
+    width: 90px;
+}
+
+.fieldLabelBig {
+    width: 190px;
+}
+
+.formNoteLeft {
+    padding-left: 0px;
+    text-align: left;
+}
+
+.formNoteRight {
+    padding-left: 0px;
+    text-align: right;
+}
+
+/* Campos para uso variado */
+.fieldMisc {
+    padding-right: 0;
+    font-size: 15px;
+}
+
+.fieldLabel + .fieldMisc {
+    padding-left: 160px;
+}
+
+.fieldLabelSmall + .fieldMisc {
+    padding-left: 110px;
+}
+
+.fieldLabelBig + .fieldMisc {
+    padding-left: 210px;
+}
+
+.fieldMisc .textArea, .fieldMisc .textAreaBig {
+    width: 100%;
+}
+
+/* Campo para contener botones */
+.fieldButtons {
+    /*padding-left:5px;*/
+    font-size: 15px;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+/* CALENDARIO */
+.calendarInputField {
+    font-size: 0;
+    vertical-align: top;
+    display: inline-block;
+    white-space: nowrap;
+    width: 116px;
+    line-height: normal;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+    .calendarInputField .imgCalendar {
+        cursor: pointer;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-image: url(../_Images/Interface/Calendar.png);
+    }
+
+    .calendarInputField .imgCalendarDelete {
+        cursor: pointer;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-image: url(../_Images/Interface/CalendarDelete.png);
+    }
+
+.checklistLine {
+    padding-top: 10px;
+}
+
+    .checklistLine:first-child {
+        padding-top: 0;
+    }
+
+.checklistLineImage {
+    float: left;
+    width: 20px;
+    height: 20px;
+}
+
+.checklistLineLabel {
+    vertical-align: top;
+    float: left;
+    width: auto;
+}
+
+.checklistLineField {
+    vertical-align: top;
+    float: right;
+    padding-right: 32px;
+}
+
+.checklistLineLabel + .checklistLineField {
+    padding-left: 300px;
+}
+
+.checklistLineComment {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+
+.checklistLine:first-child .checklistLineComment {
+    top: 0;
+}
+
+/* Estilo de los contenedores de los controles de busqueda */
+.SearchControl, .SearchControlWithView {
+    display: inline-block;
+    white-space: nowrap;
+    vertical-align: top;
+    position: relative;
+    padding-right: 0;
+    font-size: 0;
+}
+
+.SearchControl {
+    max-width: calc(100% - 40px);
+}
+
+.SearchControlWithView {
+    max-width: calc(100% - 60px);
+}
+
+.searchPanel {
+    text-align: left;
+}
+
+/* AccessControl Messages */
+.mensajeError {
+    background-color: red;
+    border-bottom: 1px solid #dddddd;
+    color: white;
+    font-size: 45px;
+    text-align: center;
+    display: block;
+    padding: 20px;
+}
+
+.mensajeExito {
+    background-color: green;
+    border-bottom: 1px solid #dddddd;
+    color: white;
+    font-size: 45px;
+    text-align: center;
+    display: block;
+    white-space: nowrap;
+    padding: 20px;
+}
+
+.mensajeAdvertencia {
+    background-color: Orange;
+    border-bottom: 1px solid #dddddd;
+    color: white;
+    font-size: 45px;
+    text-align: center;
+    display: block;
+    white-space: nowrap;
+    padding: 20px;
+}
+
+/* Form Titles */
+.title {
+    color: #1d2936;
+    display: block;
+    width: 100%;
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    cursor: default;
+}
+
+    .title:first-child {
+        padding-top: 0; /*letter-spacing: -1px;*/
+    }
+
+/* Form Subtitles */
+.subtitulo {
+    color: #1d2936;
+    font-size: 15px;
+    font-weight: normal;
+    display: block;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    border-bottom: solid 1px #dddddd;
+    margin-bottom: 5px;
+    cursor: default;
+}
+
+/* Labels */
+.lblStandar, .lblPlain, .lblStandar span {
+    /*$DefaultFont$*/
+    font-size: 13px;
+    line-height: 18px;
+    /*$DefaultTextColor$*/
+    vertical-align: top;
+    cursor: default;
+}
+
+    .lblStandar:after {
+        content: ":";
+    }
+
+/* TextBoxes */
+.textBox, .textArea, .textAreaBig {
+    box-sizing: border-box;
+    display: inline-block;
+    /*$DefaultFont$*/
+    font-size: 12px;
+    line-height: 16px;
+    height: 20px;
+    /*$ControlBorder$*/
+    margin: 0;
+    padding: 1px;
+    padding-left: 3px;
+    /*$ControlBackgroundColor$*/
+    vertical-align: top;
+    overflow: auto;
+}
+
+    .textBox:disabled, .textArea:disabled, .textAreaBig:disabled {
+        background-color: #F0F0F0;
+    }
+
+    .textBox:focus, .textArea:focus, .textAreaBig:focus {
+        /*$ControlFocusStyle$*/
+    }
+
+.textArea {
+    height: 100px;
+    resize: vertical;
+}
+
+.textAreaBig {
+    height: 200px;
+    resize: vertical;
+}
+
+.pnlTextArea {
+    box-sizing: border-box;
+    display: block;
+    /*$ControlBorder$*/
+    padding: 1px;
+    padding-left: 3px;
+    /*$ControlBackgroundColor$*/
+    /*$DefaultFont$*/
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.textBoxPlaceholder {
+    color: #888888;
+}
+
+/* DropDownList */
+.dropDown {
+    box-sizing: border-box;
+    display: inline-block;
+    /*$DefaultFont$*/
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0;
+    padding: 0;
+    /*$DefaultTextColor$*/
+    font-style: normal;
+    font-weight: normal;
+    text-align: left;
+    width: auto;
+    height: 20px;
+    vertical-align: top;
+    /*$ControlBorder$*/
+    background-color: white;
+    padding-right: 23px;
+    padding-left: 3px;
+    overflow: hidden;
+}
+
+    .dropDown[disabled] {
+        background-color: #F0F0F0;
+    }
+
+.dropDownControl {
+    display: inline-block;
+    white-space: nowrap;
+    vertical-align: top;
+    position: relative;
+    padding-right: 0;
+}
+
+    .dropDownControl:focus,
+    .dropDownControl.focus-within {
+        /*$ControlFocusStyle$*/
+    }
+
+.dropDownCont {
+    position: absolute;
+    padding: 0;
+    z-index: 100;
+    max-width: 400px;
+    min-width: 100%;
+}
+
+.dropDownList {
+    box-sizing: border-box;
+    /*$DefaultTextColor$*/
+    /*$ControlBackgroundColor$*/
+    padding: 4px;
+    border-top: 0;
+    border: 1px solid #7F7F7F;
+    overflow: auto;
+    width: 100%;
+    overflow: auto;
+    font-size: 13px;
+    z-index: 100;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+    max-height: 400px;
+}
+
+    .dropDownList *:focus {
+        /*$ControlFocusStyle$*/
+    }
+
+.autocompleteList {
+    box-sizing: border-box;
+    /*$DefaultTextColor$*/
+    /*$ControlBackgroundColor$*/
+    padding: 4px;
+    border-top: 0;
+    border: 1px solid #7F7F7F;
+    overflow: auto;
+    width: 100%;
+    overflow: auto;
+    font-size: 13px;
+    z-index: 100;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+    height: 240px;
+}
+
+.dropDownListAlertCont {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    overflow: auto;
+    z-index: 101;
+}
+
+.dropDownListAlertText {
+    line-height: 14px;
+    /*$AccentBackgroundColor$*/
+    font-size: 12px;
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+}
+
+.dropDownPanel {
+    width: 100%;
+    z-index: 4;
+}
+
+.divTransDropDownPanel {
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-color: transparent;
+    cursor: pointer;
+    background-image: url(../_Images/Interface/SortDescending.png);
+    background-repeat: no-repeat;
+    background-position-x: right;
+}
+
+    .divTransDropDownPanel:focus {
+        outline: none;
+    }
+
+    .divTransDropDownPanel::-moz-focus-inner {
+        border: 0;
+    }
+
+.divTransBackground {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    /*$ControlBackgroundColor$*/
+}
+
+.divLoadingOverlay {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 102;
+    overflow: hidden;
+    opacity: 0.4;
+    border: 1px solid #7F7F7F;
+    /*$ControlBackgroundColor$*/
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.divLoadingOverlayTrans {
+    box-sizing: border-box;
+    position: absolute;
+    top: calc( 50% - 90px);
+    left: calc( 50% - 90px);
+    width: 180px;
+    height: 180px;
+    opacity: 0.4;
+    z-index: 102;
+    overflow: hidden;
+}
+
+.divLoadingObject {
+    position: absolute;
+    top: calc( 50% - 60px);
+    left: calc( 50% - 60px);
+    width: 90px;
+    height: 90px;
+    border: solid 15px black;
+    border-top: solid 15px transparent;
+    border-radius: 90px;
+}
+
+.TextDropDown {
+    /*$DefaultTextColor$*/
+}
+
+/* CustomTreeView */
+.RootNodeStyle, .ParentNodeStyle, .LeafNodeStyle {
+    /*$DefaultFont$*/
+    font-size: 12px;
+    line-height: 16px;
+    height: 16px;
+    /*$ControlInactiveTextColor$*/
+    width: 100%;
+    white-space: nowrap;
+    padding: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.SelNodeStyle {
+    /*$DefaultTextColor$*/
+    background-color: #dadada;
+}
+
+    .RootNodeStyle a, .ParentNodeStyle a, .LeafNodeStyle a, .SelNodeStyle a {
+        display: inline-block;
+        /*$DefaultFont$*/
+        font-size: 12px;
+        line-height: 20px;
+        height: 20px;
+        /*$DefaultTextColor$*/
+        outline: none;
+        text-decoration: none;
+        padding-left: 5px;
+        width: 100%;
+    }
+
+    .SelNodeStyle a {
+        /*$DefaultTextColor$*/
+        background-color: #dadada;
+    }
+
+        a.DeactiveNodeStyle, .SelNodeStyle a.DeactiveNodeStyle {
+            /*$ControlInactiveTextColor$*/
+            text-decoration: none;
+        }
+
+.buttonEditDossier {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-image: url(../_Images/Interface/Edit.png);
+}
+
+.buttonClean {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-image: url(../_Images/Interface/Delete.png);
+}
+
+/* Buttons */
+.button {
+    /* Text properties */
+    /*$DefaultFont$*/
+    font-size: 12px;
+    line-height: 16px;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center; /* Colors */
+    background-color: #b2bcc6;
+    /*$DefaultTextColor$*/ /* Box properties */
+    border: solid 0px black;
+    padding: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0;
+    min-width: 55px;
+    width: auto; /* Other */
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: content-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    overflow: hidden;
+}
+
+    .button:hover {
+        /*$AccentBackgroundColor$*/
+    }
+
+    .button[disabled], .button[disabled]:hover {
+        color: #BCB3C7;
+        background-color: #E8E8E8;
+        cursor: default;
+        box-shadow: none;
+    }
+
+    .button:focus, .button.focus-within {
+        /*$ControlFocusStyle$*/
+    }
+
+
+.btnvalidate {
+}
+
+.button.buttonCalc {
+    font-weight: bold;
+    padding: 10px;
+    min-width: 34px;
+    width: 34px;
+    height: 34px;
+    /*$ControlBorder$*/
+    background-color: transparent;
+}
+
+/* DropDownList*/
+.dropDownItem {
+    display: block;
+    width: auto;
+    /*$DefaultTextColor$*/
+    cursor: pointer;
+    /*$DefaultFont$*/
+    font-size: 12px;
+    padding-left: 2px;
+}
+
+    .dropDownItem input[type="checkbox"] {
+        margin-right: 5px;
+        vertical-align: text-top;
+        cursor: pointer;
+    }
+
+div.dropDownItemNotInUse, .dropDownItemNotInUse {
+    /*$ControlInactiveTextColor$*/
+}
+
+.dropDownItemSelected {
+    background-color: #dadada;
+}
+
+.dropDownItemPartAutocomplete {
+    /*$ControlInactiveTextColor$*/
+}
+
+/* ModalPopups */
+.modalPopup, .modalPopupBig {
+    /*$DefaultBackgroundColor$*/
+    border: 2px solid black;
+    padding: 20px;
+    text-align: left;
+    width: 625px;
+    box-shadow: 0 0 30px rgb(0,0,0);
+    overflow: visible;
+    max-height: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.modalPopupBig {
+    width: 750px;
+}
+
+.modalBackground {
+    background-color: Black;
+    opacity: 0.7;
+}
+
+.modalButtons {
+    padding-top: 6px;
+    text-align: right;
+    font-size: 0;
+}
+
+    .modalButtons .button {
+        margin-left: 5px;
+    }
+
+/* RadioButtons */
+.radioButton label {
+    /*$DefaultFont$*/
+    font-size: 12px;
+    color: #3b3636;
+    padding-right: 15px;
+    vertical-align: top;
+    padding-left: 2px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.radioButton input {
+    cursor: pointer;
+}
+
+.radioButton label img {
+    pointer-events: none;
+}
+
+.radioButton {
+    vertical-align: top;
+    white-space: nowrap;
+    line-height: 20px;
+    border-collapse: collapse;
+    cursor: pointer;
+}
+
+    .radioButton.focus-within {
+        /*$ControlFocusStyle$*/
+    }
+
+.hiddenRadioButton input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+/* CheckBox */
+.checkbox label {
+    /*$DefaultFont$*/
+    font-size: 12px;
+    color: #3b3636;
+    padding: 0% 0.5% 0% 0.5%;
+    padding-left: 4px;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.checkbox input {
+    cursor: pointer;
+}
+
+.checkbox label img {
+    pointer-events: none;
+}
+
+.checkbox {
+    vertical-align: middle;
+    width: 100%;
+}
+
+/* Images */
+.imgPhoto {
+    max-height: 150px;
+    max-width: 150px;
+    padding-bottom: 5px;
+    display: block;
+}
+
+/* UserMessageControl */
+.lblValDocSize {
+    /*$DefaultFont$*/
+    font-size: 13px;
+    color: #FF3300;
+}
+
+.divControlVal {
+    text-align: left;
+    /*$AccentBackgroundColor$*/
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    position: relative;
+    vertical-align: middle;
+}
+
+.controlValOK {
+    background-color: #b2bcc6;
+}
+
+.lblValOK, .lblValAlert {
+    /*$DefaultFont$*/
+    color: Black;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.imgValOK, .imgValAlert {
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 40px;
+    height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.imgValOK {
+    background-image: url(../_Images/Interface/UserMessageOK.png);
+}
+
+.imgValAlert {
+    background-image: url(../_Images/Interface/UserMessageAlert.png);
+}
+
+.imgValOKSmall, .imgValAlertSmall {
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.imgValOKSmall {
+    background-image: url(../_Images/Interface/UserMessageOKSmall.png);
+}
+
+.imgValAlertSmall {
+    background-image: url(../_Images/Interface/UserMessageAlertSmall.png);
+}
+
+.imgValClose {
+    background-image: url(../_Images/Interface/Delete.png);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+/* Tabs */
+.tabsContainer {
+    width: 100%;
+    border-collapse: collapse;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.pestanyas /*objeto encuadre*/ {
+    margin: 0px;
+    padding: 0px;
+    /*$DefaultFont$*/
+    height: 31px;
+    border: none;
+    box-sizing: content-box;
+    font-size: 0;
+    white-space: nowrap;
+}
+
+    .pestanyas li /* pestañas*/ {
+        display: inline-block;
+        margin-left: 5px;
+        background-color: #dddddd;
+    }
+
+        .pestanyas li a:focus {
+            /*$MenuFocusStyle$*/
+        }
+
+        .pestanyas li:first-child {
+            margin-left: 0;
+        }
+
+        .pestanyas li#active {
+            /*$ControlBackgroundColor$*/
+        }
+
+        .pestanyas li:hover {
+            background-color: #d2d7db;
+        }
+
+        .pestanyas li a /*objeto pestaña*/ {
+            background: transparent;
+            text-decoration: none;
+            margin-left: 0;
+            /*$ControlBorder$*/
+            /*$DefaultTextColor$*/
+            display: inline-block;
+            box-sizing: border-box;
+            line-height: 30px;
+            padding-left: 15px;
+            padding-right: 15px;
+            height: 32px;
+            font-size: 15px;
+        }
+
+            .pestanyas li a#current, .pestanyas li a.current /*LINKS actual*/ {
+                /*$ControlBackgroundColor$*/
+            }
+
+                .pestanyas li a:hover, .pestanyas li a#current:hover /*LINKS pasar por encima*/ {
+                    /*$HeaderTextColor$*/
+                    background-color: #5d6d7c;
+                }
+
+/*GRIDVIEW*/
+.gridImgButtons, .gridImgButtons img {
+    width: 16px;
+    height: 16px;
+}
+
+.ctrlImgButtons, .ctrlImgButtons img {
+    width: 20px;
+    height: 20px;
+}
+
+    .ctrlImgButtons:focus img {
+        /*$ControlFocusStyle$*/
+    }
+
+    .ctrlImgButtons::-moz-focus-inner {
+        border: 0;
+    }
+
+
+.gridview_tablestyle {
+    /*$DefaultFont$*/
+    font-size: 13px;
+    table-layout: fixed; /*necesario por problema Chrome, textos de celdas sobresalian*/
+    position: relative;
+}
+
+    .gridview_tablestyle :focus {
+        outline: none;
+    }
+
+    .gridview_tablestyle.focus-within {
+        /*$ControlFocusStyle$*/
+    }
+    .gridview_tablestyle input[type="checkbox"]:focus {
+        /*$ControlFocusStyle$*/
+    }
+
+.gridview_headerstyle th {
+    /*$DefaultTextColor$*/
+    background-color: #b2bcc6;
+    border: none;
+    text-align: left;
+    padding: 2px;
+    vertical-align: middle;
+    height: 22px;
+    padding-left: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+    .gridview_headerstyle th.focus-within {
+        /*$MenuFocusStyle$*/
+    }
+
+    .gridview_headerstyle th a {
+        font-weight: bold;
+        text-decoration: none;
+        text-align: center;
+        /*$DefaultTextColor$*/
+        border-color: #b2bcc6;
+    }
+
+    .gridview_headerstyle th img {
+        width: 20px;
+        height: 20px;
+    }
+
+.gridview_footerstyle td {
+    /*$DefaultTextColor$*/
+    padding: 3px;
+    padding-top: 4px;
+    height: 22px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: bold;
+    border-top: 1px double #0c0c0c; /* double gana sobre solid (http://www.w3.org/TR/CSS2/tables.html#border-conflict-resolution)*/
+}
+
+/*Estilo filas(registros) Grid*/
+.gridview_rowstyle {
+    /*$DefaultBackgroundColor$*/
+}
+
+.gridview_rowstyle_selected {
+    background-color: #dadada;
+}
+
+.gridview_rowstyle_Inactive {
+    /*$ControlInactiveTextColor$*/
+    text-decoration: none;
+}
+
+.gridview_rowstyle a:focus,
+.gridview_rowstyle a.focus-within {
+    /*$ControlFocusStyle$*/
+}
+
+.gridview_rowstyle td, .gridview_rowstyle_selected td {
+    border: none;
+    padding: 3px;
+    padding-top: 4px;
+    height: 22px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    cursor: default !important;
+}
+
+    .gridview_rowstyle td image, .gridview_rowstyle_selected td image {
+        margin-top: 1px;
+    }
+
+.nullValueCell {
+    background-color: #DADADA;
+}
+
+/*Paginador Gridview  GRIDVIEW*/
+.gridview_pager {
+    height: 22px;
+    text-align: left;
+}
+
+    .gridview_pager td {
+        border: 0;
+        position: relative;
+    }
+
+.gridview_pager_numeric, .gridview_pager_numeric_selected, .gridview_pager_first, .gridview_pager_prev, .gridview_pager_next, .gridview_pager_last {
+    border: solid 0px Black;
+    background-color: transparent;
+    color: #4e4e4e;
+    text-align: center;
+    text-decoration: none;
+    line-height: 16px;
+    vertical-align: top;
+    font-size: 14px;
+    display: inline-block;
+    min-width: 16px;
+    min-height: 16px;
+}
+
+.gridview_pager_numeric_selected {
+    font-weight: bold;
+    cursor: default;
+}
+
+    .gridview_pager_numeric:focus,
+    .gridview_pager_numeric_selected:focus,
+    .gridImgButtons:focus {
+        /*$MenuFocusStyle$*/
+    }
+
+.gridview_itemcount {
+    position: absolute;
+    right: 0;
+}
+
+.hiddenFileUpload {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+}
+
+::-webkit-file-upload-button {
+    cursor: pointer;
+}
+
+.hiddenFileUpload[disabled] {
+    display: none;
+    cursor: default;
+}
+
+.buttonLabelFileUpload {
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Para los formularios con Informes */
+.divReport {
+    display: inline-block;
+}
+
+/* Clases para variaciones de estilos */
+.border0 {
+    border: 0;
+    border: none;
+}
+
+.alignRight {
+    text-align: right;
+}
+
+.alignLeft {
+    text-align: left;
+}
+
+.width5 {
+    width: 45px;
+    max-width: 100%;
+}
+
+.width10 {
+    width: 80px;
+    max-width: 100%;
+}
+
+.width20 {
+    width: 175px;
+    max-width: 100%;
+}
+
+.width50 {
+    width: 300px;
+    max-width: 100%;
+}
+
+.width100 {
+    width: 400px;
+    max-width: 100%;
+}
+
+.width100px {
+    width: 100px;
+    max-width: 100%;
+}
+
+.width200px {
+    width: 200px;
+    max-width: 100%;
+}
+
+.width100percent {
+    width: 100%;
+}
+
+.width33percent {
+    width: 33%;
+}
+
+.width66percent {
+    width: 66%;
+}
+
+.width10percent {
+    width: 10%;
+}
+
+.width15percent {
+    width: 15%;
+}
+
+.width20percent {
+    width: 20%;
+}
+
+.width25percent {
+    width: 25%;
+}
+
+.width30percent {
+    width: 30%;
+}
+
+.width35percent {
+    width: 35%;
+}
+
+.width40percent {
+    width: 40%;
+}
+
+.width45percent {
+    width: 45%;
+}
+
+.width50percent {
+    width: 50%;
+}
+
+.width60percent {
+    width: 60%;
+}
+
+.width65percent {
+    width: 65%;
+}
+
+.width70percent {
+    width: 70%;
+}
+
+.width75percent {
+    width: 75%;
+}
+
+.width77percent {
+    width: 77%;
+}
+
+.width80percent {
+    width: 80%;
+}
+
+.width85percent {
+    width: 85%;
+}
+
+.width90percent {
+    width: 90%;
+}
+
+.overflowVisible {
+    overflow: visible !important;
+}
+
+.height100percent {
+    height: 100%;
+}
+
+.valgnMiddle {
+    vertical-align: middle;
+}
+
+.fullHeight {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.absBottom {
+    position: absolute;
+    bottom: 0;
+}
+
+.absRight {
+    position: absolute;
+    right: 0;
+}
+
+.inlineBlock {
+    display: inline-block;
+}
+
+.divLeft {
+    float: left;
+}
+
+.divRight {
+    float: right;
+}
+
+.marginTop10 {
+    margin-top: 10px;
+}
+
+input.hiddenInput, .hiddenInput input, hidden {
+    display: none;
+}
+
+.scrollable {
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.noWrap {
+    white-space: nowrap;
+}
+
+.monospace {
+    font-family: Consolas, Monospace;
+}
+
+/* Los colores en el dropdown */
+.ddlColours {
+    display: inline-block;
+    /*$DefaultFont$*/
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    height: 20px;
+    line-height: 18px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    vertical-align: top;
+}
+
+.ddlIcons {
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 18px;
+    background-size: 16px;
+    background-position: 1px;
+}
+
+.ddlAccessFree {
+    background-image: url(../_Images/Interface/Free.png);
+}
+
+.ddlAccessConditioned {
+    background-image: url(../_Images/Interface/Conditioned.png);
+}
+
+.ddlStatesApproved {
+    background-image: url(../_Images/RequerimentStatus/Approved.png);
+}
+
+.ddlStatesPendingValidate {
+    background-image: url(../_Images/RequerimentStatus/PendingValidate.png);
+}
+
+.ddlStatesPendingSubmit {
+    background-image: url(../_Images/RequerimentStatus/PendingSubmit.png);
+}
+
+.ddlColoursPurple {
+    background-image: url(../_Images/Colours/Ball_Purple.png);
+}
+
+.ddlColoursDarkBlue {
+    background-image: url(../_Images/Colours/Ball_DarkBlue.png);
+}
+
+.ddlColoursLightBlue {
+    background-image: url(../_Images/Colours/Ball_LightBlue.png);
+}
+
+.ddlColoursDarkGreen {
+    background-image: url(../_Images/Colours/Ball_DarkGreen.png);
+}
+
+.ddlColoursLightGreen {
+    background-image: url(../_Images/Colours/Ball_LightGreen.png);
+}
+
+.ddlColoursWhite {
+    background-image: url(../_Images/Colours/Ball_White.png);
+}
+
+.ddlColoursYellow {
+    background-image: url(../_Images/Colours/Ball_Yellow.png);
+}
+
+.ddlColoursOrange {
+    background-image: url(../_Images/Colours/Ball_Orange.png);
+}
+
+.ddlColoursRed {
+    background-image: url(../_Images/Colours/Ball_Red.png);
+}
+
+.ddlColoursBlack {
+    background-image: url(../_Images/Colours/Ball_Black.png);
+}
+
+/* CustomLocalReportViewer */
+.divReport [id$=_ReportViewer] > div {
+    /*$ControlBackgroundColor$*/
+}
+
+.divReport table[id$=_fixedTable] div[id$=_ctl09][style] {
+    height: auto !important;
+}
+
+/* RichTextEditor */
+.RichTextEditor {
+    display: inline-block;
+}
+
+    .RichTextEditor.focus-within {
+        /*$ControlFocusStyle$*/
+    }
+
+.RichTextEditorToolbar {
+    /*$DefaultTextColor$*/
+    /*$DefaultBackgroundColor$*/
+    /*$ControlBorder$*/
+    border-bottom: none;
+    box-sizing: border-box;
+    font-size: 0;
+    line-height: 0;
+}
+
+    .RichTextEditorToolbar div:hover {
+        cursor: pointer;
+        /*$AccentBackgroundColor$*/
+    }
+
+.RichTextEditorContent {
+    /*$ControlBorder$*/
+    border-top: none;
+    box-sizing: border-box;
+    padding: 10px;
+    /*$ControlBackgroundColor$*/
+    /*$DefaultFont$*/
+    /*$DefaultTextColor$*/
+}
+
+    .RichTextEditorContent:focus {
+        outline: none;
+    }
+
+    .RichTextEditorContent span.param {
+        background-color: #b2bcc6;
+        margin: 1px;
+        font-size: 12px;
+    }
+
+    .paddingleft0px {
+        padding-left:0px;
+    }
+    
+    .paddingleft5px {
+        padding-left:5px;
+    }
+
+    .paddingright0px {
+        padding-right:0px;
+    }
+
+    .paddingright5px {
+        padding-right:5px;
+    }

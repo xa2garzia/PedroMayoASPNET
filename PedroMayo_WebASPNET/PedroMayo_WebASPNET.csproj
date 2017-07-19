@@ -97,7 +97,9 @@
     <Content Include="packages.config" />
     <Content Include="Site.Master" />
     <Content Include="Web.config.txt" />
-    <Content Include="_js\main.js" />
+    <Content Include="_js\main.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="_style\PedroMayo.css" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

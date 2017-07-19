@@ -2,6 +2,7 @@
 using PedroMayo.Main.BusinessLogic;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -28,6 +29,28 @@ namespace PedroMayo_WebASPNET.MAIN
             lstUsers.DataValueField = "IDUser";
             lstUsers.DataTextField = "Name";
             lstUsers.DataBind();
+
+            DataTable usersDt = mbfll.GetUsersDT();
+
+            PMDropDownList1.Items.Clear();
+
+            //DataTable dt = MasterBL.Departments_GetRegsBy(oidWorkCenter);
+            if (usersDt.Rows.Count == 0)
+            {
+                PMDropDownList1.Enabled = false;
+                return;
+            }
+
+            PMDropDownList1.DataValueField = "Name";
+            PMDropDownList1.DataTextField = "Name";
+            PMDropDownList1.DataInUseField = "InUse";
+            PMDropDownList1.LoadData(usersDt);
+            PMDropDownList1.Enabled = true;
+
+            /*if (oidDepartments != null)
+                ddlDepartment.SelectedValues = oidDepartments;*/
+
+            PMDropDownList1.LoadData(usersDt);
         }
     }
 }
