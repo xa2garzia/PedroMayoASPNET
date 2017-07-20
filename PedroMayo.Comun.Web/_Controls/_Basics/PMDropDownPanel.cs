@@ -241,27 +241,41 @@ namespace PedroMayo.Comun.Web._Controls._Basics
         {
             _fieldControl = new HtmlGenericControl { ID = "fieldText" };
             _fieldControl.Attributes.Add("unselectable", "on");
-            var divFieldControl = new HtmlGenericControl("div") { ID = "divFieldControl" };
-            divFieldControl.Attributes.Add("class", "dropDownPanel");
-            divFieldControl.Controls.Add(_fieldControl);
-
-            _divTransControls = new HtmlGenericControl("div") { ID = "divTransControls" };
-            _divTransControls.Attributes.Add("class", "divTransDropDownPanel");
+            
             _hidStatus = new HiddenField { ID = "hidStatus" };
-            _divTransBackground = new HtmlGenericControl("div") { ID = "divTransBackground" };
-            _divTransBackground.Attributes.Add("class", "divTransBackground");
-            _divContentWrapper = new HtmlGenericControl("div") { ID = "divContentWrapper" };
-            _divContentWrapper.Attributes.Add("class", "dropDownCont");
-            _divContent = new HtmlGenericControl("div") { ID = "divContent" };
-            _divContent.Attributes.Add("class", "dropDownList");
-            _divContentWrapper.Controls.Add(_divContent);
+            
             _divWrapper = new HtmlGenericControl("div") { ID = "divWrapper" };
             _divWrapper.Attributes.Add("tabindex", "0");
-            _divWrapper.Controls.Add(_divTransControls);
-            _divWrapper.Controls.Add(_divTransBackground);
-            _divWrapper.Controls.Add(divFieldControl);
-            _divWrapper.Controls.Add(_hidStatus);
-            _divWrapper.Controls.Add(_divContentWrapper);
+            {
+
+                _divTransControls = new HtmlGenericControl("div") { ID = "divTransControls" };
+                _divTransControls.Attributes.Add("class", "divTransDropDownPanel");
+                _divWrapper.Controls.Add(_divTransControls);
+
+
+                _divTransBackground = new HtmlGenericControl("div") { ID = "divTransBackground" };
+                _divTransBackground.Attributes.Add("class", "divTransBackground");
+                _divWrapper.Controls.Add(_divTransBackground);
+
+                //
+                var divFieldControl = new HtmlGenericControl("div") { ID = "divFieldControl" };
+                divFieldControl.Attributes.Add("class", "dropDownPanel");
+                divFieldControl.Controls.Add(_fieldControl);
+                _divWrapper.Controls.Add(divFieldControl);
+
+
+                _divWrapper.Controls.Add(_hidStatus);
+
+                _divContentWrapper = new HtmlGenericControl("div") { ID = "divContentWrapper" };
+                _divContentWrapper.Attributes.Add("class", "dropDownCont");
+                {
+                    _divContent = new HtmlGenericControl("div") { ID = "divContent" };
+                    _divContent.Attributes.Add("class", "dropDownList");
+                }
+
+                _divContentWrapper.Controls.Add(_divContent);
+                _divWrapper.Controls.Add(_divContentWrapper);
+            }
 
             Controls.Add(_divWrapper);
         }
