@@ -1635,6 +1635,10 @@ hr {
     overflow: hidden;
 }
 
+input[type=text]{
+    border: solid 1px black;
+}
+
     .button:hover {
         /*$AccentBackgroundColor$*/
     }
